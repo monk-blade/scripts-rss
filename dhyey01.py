@@ -31,7 +31,7 @@ def parse_data(resp,urls,feedas):
         dl_tag = sp.find("div", {"class": "boxdownload"})
         dl_tag.decompose()
         body = sp.find("div", {"class": "node-content"})
-        final_html_op = str(article_title)+str(body)
+        final_html_op = "<html><head><title>" + str(article_title) + "</title></head><body>" + str(article_title) + str(body) + "</body></html>"
         #print(final_html_op)
         temp_feed = {
             'title' : article_title.text.strip(),
