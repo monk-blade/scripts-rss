@@ -1,8 +1,0 @@
-requests
-grequests
-beautifulsoup4
-lxml
-html5lib
-feedgen
-python-dateutil
-pytz
