@@ -72,11 +72,11 @@ def getdate_data(datelink):
 
 def feedgen_main(feeds):
     title_feed = 'Drishti IAS RSS feeds'
-    id_feed = 'https://monk-blade.github.io/repo/name.xml'
+    id_feed = 'https://monk-blade.github.io/scripts-rss/drishti-rss.xml'
     author_name_feed = 'Arpan'
     author_mail_feed = 'monk@blade.com'
-    link_feed = 'https://monk-blade.github.io/repo/name.xml'
-    logo_feed = 'example.com/com.jpg'
+    link_feed = 'https://monk-blade.github.io/scripts-rss/drishti-rss.xml'
+    logo_feed = 'https://www.drishtiias.com/frontend/img/drishti_logo_new.png'
     lang_feed = 'en'
     subtitle_feed = 'UPSC Serving'
 

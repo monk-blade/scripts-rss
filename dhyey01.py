@@ -62,11 +62,11 @@ def getdate_data(datelink):
 
 def feedgen_main(feeds):
     title_feed = 'Dhyeya IAS RSS feeds'
-    id_feed = 'https://monk-blade.github.io/repo/name.xml'
+    id_feed = 'https://monk-blade.github.io/scripts-rss/dhyeya-rss.xml'
     author_name_feed = 'Arpan'
     author_mail_feed = 'monk@blade.com'
-    link_feed = 'https://monk-blade.github.io/repo/name.xml'
-    logo_feed = 'example.com/com.jpg'
+    link_feed = 'https://monk-blade.github.io/scripts-rss/dhyeya-rss.xml'
+    logo_feed = 'https://www.dhyeyaias.com/sites/default/files/Dhyeya-IAS-English-Logo-Small.png'
     lang_feed = 'en'
     subtitle_feed = 'UPSC Serving'
 
@@ -93,7 +93,7 @@ if __name__ == '__main__':
     feedas = getdate_data(main_link)
     resp = get_data(urls)
     fds = parse_data(resp,urls,feedas)
-    print(fds)
+    #print(fds)
     fg = FeedGenerator()
     feedgen_main(fds)
     fg.rss_file('dhyeya-rss.xml')
