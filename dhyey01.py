@@ -37,7 +37,7 @@ def parse_data(resp,urls,feedas):
             'title' : article_title.text.strip(),
             'link_url' : urls[i],
             'pubDate' : feedas[i],
-            'content' : final_html_op,
+            #'content' : final_html_op,
         }
         i = i + 1
         feeds_list.append(temp_feed)
@@ -83,7 +83,7 @@ def feedgen_main(feeds):
         entry.id(add_feeds['link_url'])
         entry.link(href=add_feeds['link_url'], rel='alternate')
         entry.pubDate(add_feeds['pubDate'])
-        entry.content(add_feeds['content'],type="CDATA")
+        #entry.content(add_feeds['content'],type="CDATA")
 
 if __name__ == '__main__':
     start = time.perf_counter()
