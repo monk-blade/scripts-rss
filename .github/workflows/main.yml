@@ -21,7 +21,7 @@ jobs:
         run: |
           python dhyey01.py
           python drishti01.py          
-          cp *.xml public/
+          mv *.xml public/
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
