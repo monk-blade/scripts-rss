@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Dhyeya IAS RSS feeds</title><link>https://monk-blade.github.io/scripts-rss/dhyeya-rss.xml</link><description>UPSC Serving</description><atom:link href="https://monk-blade.github.io/scripts-rss/dhyeya-rss.xml" rel="self"/><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://www.dhyeyaias.com/sites/default/files/Dhyeya-IAS-English-Logo-Small.png</url><title>Dhyeya IAS RSS feeds</title><link>https://monk-blade.github.io/scripts-rss/dhyeya-rss.xml</link></image><language>en</language><lastBuildDate>Sat, 01 Jul 2023 10:19:26 +0000</lastBuildDate><item><title>गलवान झड़प के तीन साल बाद भारत-चीन संबंधों की वर्तमान स्थिति - डेली न्यूज़ एनालिसिस</title><link>https://www.dhyeyaias.com//hindi/current-affairs/articles/the-current-status-of-india-china-relations-three-years-after-the-galwan-clash</link><description><![CDATA[<html><head><title><h1 id="page-title">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Dhyeya IAS RSS feeds</title><link>https://monk-blade.github.io/scripts-rss/dhyeya-rss.xml</link><description>UPSC Serving</description><atom:link href="https://monk-blade.github.io/scripts-rss/dhyeya-rss.xml" rel="self"/><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://www.dhyeyaias.com/sites/default/files/Dhyeya-IAS-English-Logo-Small.png</url><title>Dhyeya IAS RSS feeds</title><link>https://monk-blade.github.io/scripts-rss/dhyeya-rss.xml</link></image><language>en</language><lastBuildDate>Sat, 01 Jul 2023 12:34:46 +0000</lastBuildDate><item><title>गलवान झड़प के तीन साल बाद भारत-चीन संबंधों की वर्तमान स्थिति - डेली न्यूज़ एनालिसिस</title><link>https://www.dhyeyaias.com//hindi/current-affairs/articles/the-current-status-of-india-china-relations-three-years-after-the-galwan-clash</link><description><![CDATA[<html><head><title><h1 id="page-title">
 गलवान झड़प के तीन साल बाद भारत-चीन संबंधों की वर्तमान स्थिति - डेली न्यूज़ एनालिसिस </h1></title></head><body><h1 id="page-title">
 गलवान झड़प के तीन साल बाद भारत-चीन संबंधों की वर्तमान स्थिति - डेली न्यूज़ एनालिसिस </h1><div class="node-content">
 <div class="field field-name-body field-type-text-with-summary field-label-hidden view-mode-full"><div class="field-items"><div class="field-item even" property="content:encoded"><p align="justify"><font color="#FF0000"><b>तारीख (Date):
@@ -3844,13 +3844,13 @@ Google और मेटा जैसे समर्थित अमेरिक
 चार्जिंग समय कम होता है और लागत भी कम होती है।</li>
 </ul>
 <h2><font color="#283c67">ईवी के समक्ष चुनौतियाँ:</font></h2>
-<h3>उच्च आरंभिक लागत-</h3>
+<h3><font color="#FF0000">उच्च आरंभिक लागत-</font></h3>
 <ul style="text-align: justify">
 <li><b>सामर्थ्य बाधा:</b> महंगी बैटरी तकनीक के कारण ईवी खरीदने की अग्रिम
 लागत पारंपरिक वाहनों की तुलना में अपेक्षाकृत अधिक है। यह संभावित खरीदारों के
 बीच ईवी की मांग को सीमित करता है।</li>
 </ul>
-<h3>सीमित चार्जिंग अवसंरचना-</h3>
+<h3><font color="#FF0000">सीमित चार्जिंग अवसंरचना-</font></h3>
 <ul style="text-align: justify">
 <li><b>अपर्याप्त बुनियादी ढांचा:</b> भारत में चार्जिंग बुनियादी ढांचा अभी भी
 शुरुआती चरण में है और प्रमुख शहरों में केंद्रित है। एक मजबूत और व्यापक
@@ -3897,10 +3897,11 @@ Google और मेटा जैसे समर्थित अमेरिक
 विभिन्न प्रकार के चार्जिंग कनेक्टर की उपलब्धता।</li>
 <li><b>इसरो (भारतीय अंतरिक्ष अनुसंधान संगठन) की लिथियम सेल प्रौद्योगिकी:</b>
 इसरो द्वारा उद्योगों को स्वदेशी लिथियम सेल प्रौद्योगिकी का हस्तांतरण।</li>
-</ul>
-<p align="justify">विभिन्न राज्यों की ईवी नीतियां: दिल्ली, कर्नाटक, महाराष्ट्र
+<li>
+<p align="justify"><b>विभिन्न राज्यों की ईवी नीतियां:</b> दिल्ली, कर्नाटक, महाराष्ट्र
 और तेलंगाना सहित कई राज्यों द्वारा रियायती ईवी चार्जिंग टैरिफ, सड़क और पंजीकरण
-कर में छूट।</p>
+कर में छूट।</p></li>
+</ul>
 <h2><font color="#283c67">निष्कर्ष:</font></h2>
 <p align="justify">ईवी का प्रचलन सतत परिवहन के एक नए युग की शुरुआत करता है।
 सरकारों और हितधारकों को ईवी को व्यापक रूप से अपनाने को बढ़ावा देने के लिए
