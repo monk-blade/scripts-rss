@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Dhyeya IAS RSS feeds</title><link>https://monk-blade.github.io/scripts-rss/dhyeya-rss.xml</link><description>UPSC Serving</description><atom:link href="https://monk-blade.github.io/scripts-rss/dhyeya-rss.xml" rel="self"/><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://www.dhyeyaias.com/sites/default/files/Dhyeya-IAS-English-Logo-Small.png</url><title>Dhyeya IAS RSS feeds</title><link>https://monk-blade.github.io/scripts-rss/dhyeya-rss.xml</link></image><language>en</language><lastBuildDate>Tue, 18 Jul 2023 08:22:49 +0000</lastBuildDate><item><title>ऑनलाइन विज्ञापनों में डार्क पैटर्न: जालसाजी और उपभोक्ता संरक्षण की आवश्यकता - डेली न्यूज़ एनालिसिस</title><link>https://www.dhyeyaias.com//hindi/current-affairs/articles/dark-patterns-in-online-advertisements</link><description><![CDATA[<html><head><title><h1 id="page-title">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Dhyeya IAS RSS feeds</title><link>https://monk-blade.github.io/scripts-rss/dhyeya-rss.xml</link><description>UPSC Serving</description><atom:link href="https://monk-blade.github.io/scripts-rss/dhyeya-rss.xml" rel="self"/><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://www.dhyeyaias.com/sites/default/files/Dhyeya-IAS-English-Logo-Small.png</url><title>Dhyeya IAS RSS feeds</title><link>https://monk-blade.github.io/scripts-rss/dhyeya-rss.xml</link></image><language>en</language><lastBuildDate>Tue, 18 Jul 2023 10:19:09 +0000</lastBuildDate><item><title>ऑनलाइन विज्ञापनों में डार्क पैटर्न: जालसाजी और उपभोक्ता संरक्षण की आवश्यकता - डेली न्यूज़ एनालिसिस</title><link>https://www.dhyeyaias.com//hindi/current-affairs/articles/dark-patterns-in-online-advertisements</link><description><![CDATA[<html><head><title><h1 id="page-title">
 ऑनलाइन विज्ञापनों में डार्क पैटर्न: जालसाजी और उपभोक्ता संरक्षण की आवश्यकता - डेली न्यूज़ एनालिसिस </h1></title></head><body><h1 id="page-title">
 ऑनलाइन विज्ञापनों में डार्क पैटर्न: जालसाजी और उपभोक्ता संरक्षण की आवश्यकता - डेली न्यूज़ एनालिसिस </h1><div class="node-content">
 <div class="field field-name-body field-type-text-with-summary field-label-hidden view-mode-full"><div class="field-items"><div class="field-item even" property="content:encoded"> <p align="justify"><font color="#FF0000"><b>तारीख (Date):
@@ -4046,7 +4046,8 @@ LVM-3 (लॉन्च व्हीकल मार्क-3) का उपयो
 <li>चंद्र सतह पर ऑन-साइट प्रयोगों का संचालन करना।</li>
 </ul>
 <h2><font color="#283c67">चंद्रयान-3 के चंद्र मिशन की प्रत्याशा (Anticipation)</font></h2>
-<p align="justify">यह भारत का तीसरा चंद्र मिशन, चंद्रयान-3, श्रीहरिकोटा के सतीश
+<p align="justify">चंद्रयान-3 भारत का तीसरा चंद्र मिशन
+है, श्रीहरिकोटा के सतीश
 धवन अंतरिक्ष केंद्र से लॉन्च किया गया था। यह मिशन अगस्त के अंत तक चन्द्रमा की
 सतह पर पहुंचेगा । इस मिशन का उद्देश्य चंद्रयान -2 की उपलब्धियों को आगे बढ़ाना
 है, जिसे दुर्भाग्य से तब झटका लगा था जब इसका लैंडर, 'विक्रम' 2019 में चंद्र सतह
@@ -4080,7 +4081,7 @@ LVM-3 (लॉन्च व्हीकल मार्क-3) का उपयो
 घनत्व को मापेगी और यह समय के साथ कैसे बदलती है इसका भी अवलोकन करेगी ।</li>
 <li>तीसरा पेलोड इंस्ट्रुमेंट फॉर लूनर सिस्मिक एक्टिविटी (ILSA) है, जो चंद्रमा
 पर भूकंपीय गतिविधि को मापेगा।</li>
-<li>चौथा , लेजर रेट्रोरेफ्लेक्टर ऐरे (एलआरए) है, जो एक निष्क्रिय प्रयोग है
+<li>चौथा, लेजर रेट्रोरेफ्लेक्टर ऐरे (LRA) है, जो एक निष्क्रिय प्रयोग है
 जो चंद्रमा की गतिशीलता को समझने में मदद करेगा।</li>
 </ul>
 <p align="justify">रोवर पर दो वैज्ञानिक पेलोड हैं। पहला लेजर प्रेरित ब्रेकडाउन
@@ -4093,7 +4094,7 @@ LVM-3 (लॉन्च व्हीकल मार्क-3) का उपयो
 <h3><font color="#FF0000">प्रोपल्शन मॉड्यूल पेलोड और एक्सोप्लैनेट अनुसंधान</font></h3>
 <ul style="text-align: justify">
 <li>यह प्रोपल्शन मॉड्यूल, SHAPE (रहने योग्य ग्रह पृथ्वी की
-स्पेक्ट्रो-पोलरिमेट्री) नामक एक पेलोडभी ले गया है। यह पेलोड चंद्र कक्षा से
+स्पेक्ट्रो-पोलरिमेट्री) नामक एक पेलोड भी ले गया है। यह पेलोड चंद्र कक्षा से
 पृथ्वी का अध्ययन करेगा, और एक्सोप्लैनेट अनुसंधान के लिए मूल्यवान डेटा प्रदान
 करेगा।</li>
 </ul>
@@ -4205,7 +4206,8 @@ LVM-3 (लॉन्च व्हीकल मार्क-3) का उपयो
 <h3>2. सौर पैनल:</h3>
 <ul style="text-align: justify">
 <li><b>चंद्रयान-2:</b> लैंडर के दो तरफ सोलर पैनल लगे थे.</li>
-<li><b>चंद्रयान-3:</b> लैंडर चरों तरफ से सौर पैनलों से सुसज्जित है, जो
+<li><b>चंद्रयान-3:</b> लैंडर
+चारों तरफ से सौर पैनलों से सुसज्जित है, जो
 प्रतिकूल लैंडिंग ओरिएंटेशन में भी निरंतर बिजली उत्पादन सुनिश्चित करता है।</li>
 </ul>
 <h3>3. नेविगेशनल और मार्गदर्शन उपकरण:</h3>
@@ -4229,7 +4231,8 @@ LVM-3 (लॉन्च व्हीकल मार्क-3) का उपयो
 को सिमुलेशन सहित विभिन्न परीक्षणों से गुजरना पड़ा था ।</li>
 <li><b>चंद्रयान-3:</b> चंद्रयान-3 पर भी इसी तरह के तनाव परीक्षण और प्रयोग
 किए गए हैं, जिसमें चंद्र लैंडिंग परिदृश्यों में इसकी लचीलापन सुनिश्चित करने
-के लिए इसे हेलीकॉप्टरों से गिराना भी शामिल है।</li>
+के लिए इसे हेलीकॉप्टरों से
+निगरानी भी शामिल है।</li>
 </ul>
 <p align="justify">कुल मिलाकर, चंद्रयान-3 में चंद्रयान-2 की विफलता से मिली सीख
 के आधार पर कई सुधार और संवर्द्धन शामिल किए गए हैं। चंद्रमा की सतह पर सफल सॉफ्ट
@@ -4555,7 +4558,8 @@ LVM-3 (लॉन्च व्हीकल मार्क-3) का उपयो
 <li>भारत में कोयला मंत्रालय कोयला गैसीकरण को बढ़ावा देने के लिए एक व्यापक
 योजना - राष्ट्रीय कोयला गैसीकरण मिशन - पर विचार कर रहा है, जिसका लक्ष्य
 वित्त वर्ष 2030 तक 100 मिलियन टन (एमटी) कोयला गैसीकरण हासिल करना है।</li>
-<li>राष्ट्रीय मिशन के कार्यान्वयन की निगरानी के लिए डॉ. वी. के. सारस्वत की
+<li>राष्ट्रीय मिशन के कार्यान्वयन की निगरानी के लिए
+<b>डॉ. वी. के. सारस्वत</b> की
 अध्यक्षता में एक संचालन समिति का गठन किया गया है।</li>
 </ul>
 <p align="center">
@@ -4584,7 +4588,7 @@ LVM-3 (लॉन्च व्हीकल मार्क-3) का उपयो
 का हवा, ऑक्सीजन, भाप या कार्बन डाइऑक्साइड के साथ आंशिक रूप से ऑक्सीकरण करना
 शामिल है। सिनगैस के नाम से जानी जाने वाली इस गैस का उपयोग ऊर्जा उत्पादन के
 लिए पाइप्ड प्राकृतिक गैस या मीथेन के विकल्प के रूप में किया जा सकता है।
-अंडरग्राउंड कोल गैसीफिकेशन (यूसीजी) नामक एक तकनीक भी है, जहां कोयले को
+भूमिगत कोल गैसीफिकेशन (यूसीजी) नामक एक तकनीक भी है, जहां कोयले को
 संस्तर में रहते हुए गैस में परिवर्तित किया जाता है और फिर कुओं के माध्यम से
 निकाला जाता है।</li>
 <li><b>सिनगैस उत्पादन:</b> सिनगैस में मुख्य रूप से मीथेन, कार्बन मोनोऑक्साइड,
@@ -4659,7 +4663,7 @@ LVM-3 (लॉन्च व्हीकल मार्क-3) का उपयो
 <h2><font color="#283c67">कोयला गैसीकरण के नुकसान:</font></h2>
 <ul style="text-align: justify">
 <li><b>कार्बन तीव्रता: </b>कुछ अध्ययनों से पता चलता है कि कोयला गैसीकरण से
-पारंपरिक कोयला संयंत्रों की तुलना में अधिक CO2 उत्सर्जन हो सकता है, जिसके
+पारंपरिक कोयला संयंत्रों की तुलना में अधिक CO<sub>2</sub> उत्सर्जन हो सकता है, जिसके
 परिणामस्वरूप उच्च कार्बन तीव्रता हो सकती है।</li>
 <li><b>जल गहन: </b>कोयला गैसीकरण एक जल-गहन प्रक्रिया है, जो पहले से ही पानी
 की कमी का सामना कर रहे क्षेत्रों में चुनौतियां पैदा कर सकती है।</li>
