@@ -31,7 +31,7 @@ def process_with_gemini(text):
     headers = {'Content-Type': 'application/json'}
     # Ask Gemini to summarize and generate HTML content
     prompt = (
-        "Summarize the following RSS feed item in 5 sentences, then generate improved HTML content in gujarati language for it. "
+        "Summarize the following RSS feed item in bullet points, then generate improved HTML content in gujarati language for it. "
         "Respond in html with proper elements.\nContent: " + text
     )
     payload = {
@@ -70,7 +70,8 @@ def add_html_to_rss(feed_xml, html_contents):
         if html:
             combined += html
         if desc is not None:
-            desc.text = (desc.text or '') + '\n' + combined
+            # Place Gemini content at the start, then the original description
+            desc.text = combined + '\n' + (desc.text or '')
         else:
             ET.SubElement(item, 'description').text = combined
     return ET.tostring(tree.getroot(), encoding='utf-8', xml_declaration=True)
