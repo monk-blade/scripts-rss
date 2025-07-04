@@ -1,6 +1,7 @@
 import requests
 import feedparser
 import os
+import time
 from xml.etree import ElementTree as ET
 
 # --- CONFIG ---
@@ -93,10 +94,13 @@ if __name__ == '__main__':
         parsed = parse_rss(feed_xml)
         # 3. Process each entry with Gemini (get summary and html)
         html_contents = []
-        for entry in parsed.entries:
+        for idx, entry in enumerate(parsed.entries):
             content = entry.get('summary', '') or entry.get('description', '')
             result = process_with_gemini(content)
             html_contents.append(result)
+            # Rate limit: 15 requests per minute (1 request every 4 seconds)
+            if idx < len(parsed.entries) - 1:
+                time.sleep(4)
         # 4. Add summary and HTML to RSS
         processed_xml = add_html_to_rss(feed_xml, html_contents)
         # 5. Save, use a unique filename per feed (from feed title if available)
