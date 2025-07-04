@@ -1,0 +1,48 @@
+name: Publish Processed RSS to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests feedparser
+
+      - name: Run RSS Processor
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python rss_processor.py
+
+      - name: Upload RSS to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          force_orphan: true
+
+      - name: Print Processed RSS Feed URLs
+        run: |
+          echo "Your processed RSS feeds will be available at:"
+          for file in public/processed-*.xml; do
+            fname=$(basename "$file")
+            echo "https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY}/${fname}"
+          done
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}

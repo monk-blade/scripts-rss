@@ -1,0 +1,13 @@
+Code Summary for RSS Processor:
+
+1. The Python script (`rss_processor.py`) processes multiple RSS feeds listed in `RSS_FEED_URLS`.
+2. For each feed:
+   - Fetches the RSS XML from the URL.
+   - Parses the feed using `feedparser`.
+   - For each item, sends the content to Gemini AI to generate a summary and improved HTML.
+   - Adds the summary and HTML to the `<description>` of each RSS item.
+   - Saves the processed feed as `public/processed-<feed_domain>.xml`.
+3. The GitHub Actions workflow (`.github/workflows/publish.yml`):
+   - Installs dependencies and runs the script on every push to `main`.
+   - Publishes all processed feeds in the `public` directory to the `gh-pages` branch using GitHub Pages.
+   - Prints the public URLs for all processed feeds, so they can be subscribed to in any RSS reader.
