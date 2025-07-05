@@ -7,7 +7,7 @@ from xml.etree import ElementTree as ET
 # --- CONFIG ---
 RSS_FEED_URLS = [
     'https://reader.websitemachine.nl/api/query.php?user=arpanchavdaeng&t=43c93b5336ffb7d07cc1b3971fde9970&f=rss',  # Add your feed URLs here
-    # 'https://another.com/feed.xml',
+    'https://reader.websitemachine.nl/api/query.php?user=arpanchavdaeng&t=870ee7e79a574c5f83ac21ac1998ed54&f=rss',
 ]
 gemini_api_key = os.getenv('GEMINI_API_KEY')  # Set your Gemini API key as env var
 GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite-preview-06-17:generateContent'
@@ -50,6 +50,17 @@ def process_with_gemini(text):
         # Try to parse JSON from Gemini's response
         import json as _json
         response_text = data['candidates'][0]['content']['parts'][0]['text']
+        
+        # Clean up markdown code blocks and backticks
+        import re
+        # Remove markdown code blocks (```html, ```xml, ```)
+        response_text = re.sub(r'```(?:html|xml)?\s*', '', response_text)
+        response_text = re.sub(r'```\s*$', '', response_text, flags=re.MULTILINE)
+        # Remove single backticks
+        response_text = response_text.replace('`', '')
+        # Clean up extra whitespace
+        response_text = response_text.strip()
+        
         try:
             result = _json.loads(response_text)
             return {'summary': result.get('summary', ''), 'html': result.get('html', '')}
