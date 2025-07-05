@@ -31,8 +31,8 @@ def process_with_gemini(text):
     headers = {'Content-Type': 'application/json'}
     # Ask Gemini to summarize and generate HTML content
     prompt = (
-        "Summarize the following RSS feed item in bullet points in gujarati language and with html formatting.\n"
-        "Content: " + text
+        "Summarize the following RSS feed item in bullet points with emojis in gujarati language and with html formatting. Summary must start with \"સારાંશ\" heading and output.\n"
+        "Feed Content: " + text
     )
     payload = {
         'contents': [{'parts': [{'text': prompt}]}],
