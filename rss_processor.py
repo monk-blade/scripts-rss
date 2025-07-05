@@ -31,11 +31,16 @@ def process_with_gemini(text):
     headers = {'Content-Type': 'application/json'}
     # Ask Gemini to summarize and generate HTML content
     prompt = (
-        "Summarize the following RSS feed item in bullet points, then generate improved HTML content in gujarati language for it. "
-        "Respond in html with proper elements.\nContent: " + text
+        "Summarize the following RSS feed item in bullet points in gujarati language and with html formatting.\n"
+        "Content: " + text
     )
     payload = {
-        'contents': [{'parts': [{'text': prompt}]}]
+        'contents': [{'parts': [{'text': prompt}]}],
+        'generationConfig': {
+            'thinkingConfig': {
+                'thinkingBudget': -1
+            }
+        }
     }
     params = {'key': gemini_api_key}
     try:

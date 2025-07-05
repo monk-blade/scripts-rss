@@ -3,6 +3,8 @@ name: Publish Processed RSS to GitHub Pages
 on:
   push:
     branches: [ main ]
+  schedule:
+    - cron: '30 23 * * *'  # Runs at 5:00 AM IST (11:30 PM UTC)
   workflow_dispatch:
 
 jobs:
