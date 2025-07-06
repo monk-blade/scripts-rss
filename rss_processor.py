@@ -8,9 +8,10 @@ from xml.etree import ElementTree as ET
 RSS_FEED_URLS = [
     'https://reader.websitemachine.nl/api/query.php?user=arpanchavdaeng&t=43c93b5336ffb7d07cc1b3971fde9970&f=rss',  # Add your feed URLs here
     'https://reader.websitemachine.nl/api/query.php?user=arpanchavdaeng&t=870ee7e79a574c5f83ac21ac1998ed54&f=rss',
+    'https://reader.websitemachine.nl/api/query.php?user=arpanchavdaeng&t=9d10ff528a331696b57f0bc86caa336f&f=rss',
 ]
 gemini_api_key = os.getenv('GEMINI_API_KEY')  # Set your Gemini API key as env var
-GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite-preview-06-17:generateContent'
+GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent'
 OUTPUT_DIR = 'public'
 
 # --- STEP 1: Fetch RSS Feed ---
@@ -31,7 +32,7 @@ def process_with_gemini(text):
     headers = {'Content-Type': 'application/json'}
     # Ask Gemini to summarize and generate HTML content
     prompt = (
-        "Summarize the following RSS feed item in bullet points with emojis in gujarati language and with html formatting. Summary must start with \"સારાંશ\" heading and output.\n"
+        "Summarize the following RSS feed item to cover everything of content in bullet points with emojis in gujarati language and with html formatting. Summary must start with \"સારાંશ\" H2 heading and output.\n"
         "Feed Content: " + text
     )
     payload = {
