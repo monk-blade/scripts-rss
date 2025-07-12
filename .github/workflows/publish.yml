@@ -41,9 +41,10 @@ jobs:
       - name: Print Processed RSS Feed URLs
         run: |
           echo "Your processed RSS feeds will be available at:"
+          REPO_NAME=$(basename "${GITHUB_REPOSITORY}")
           for file in public/processed-*.xml; do
             fname=$(basename "$file")
-            echo "https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY}/${fname}"
+            echo "https://${GITHUB_REPOSITORY_OWNER}.github.io/${REPO_NAME}/${fname}"
           done
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
