@@ -1,10 +1,11 @@
-name: Publish Processed RSS to GitHub Pages
+
+name: RSS Feed Generator & Publisher
 
 on:
   push:
     branches: [ main ]
   schedule:
-    - cron: '30 23 * * *'  # Runs at 5:00 AM IST (11:30 PM UTC)
+    - cron: '30 23 * * *' # 5:00 AM IST (11:30 PM UTC)
   workflow_dispatch:
 
 jobs:
@@ -22,13 +23,21 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
+          pip install -r requirements.txt
           pip install requests feedparser
 
-      - name: Run RSS Processor
+      - name: Run all feed generator scripts
+        run: |
+          python dhyey01.py
+          python drishti01.py
+          python rss_processor.py
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      - name: Move XML files to public/
         run: |
-          python rss_processor.py
+          mkdir -p public
+          mv *.xml public/ || true
 
       - name: Upload RSS to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
@@ -42,7 +51,7 @@ jobs:
         run: |
           echo "Your processed RSS feeds will be available at:"
           REPO_NAME=$(basename "${GITHUB_REPOSITORY}")
-          for file in public/processed-*.xml; do
+          for file in public/*.xml; do
             fname=$(basename "$file")
             echo "https://${GITHUB_REPOSITORY_OWNER}.github.io/${REPO_NAME}/${fname}"
           done

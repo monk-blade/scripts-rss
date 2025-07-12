@@ -73,25 +73,58 @@ def process_with_gemini(text):
         return {'summary': '', 'html': ''}
 
 # --- STEP 4: Add HTML to RSS Items ---
-def add_html_to_rss(feed_xml, html_contents):
+def add_html_to_rss(feed_xml, html_contents, recent_entries=None):
     tree = ET.ElementTree(ET.fromstring(feed_xml))
     channel = tree.find('channel')
+    if channel is None:
+        return b''
     items = channel.findall('item')
-    for item, content in zip(items, html_contents):
-        summary = content.get('summary', '')
-        html = content.get('html', '')
-        desc = item.find('description')
-        combined = ''
-        if summary:
-            combined += f'<b>Summary:</b> {summary}<br/>'
-        if html:
-            combined += html
-        if desc is not None:
-            # Place Gemini content at the start, then the original description
-            desc.text = combined + '\n' + (desc.text or '')
-        else:
-            ET.SubElement(item, 'description').text = combined
-    return ET.tostring(tree.getroot(), encoding='utf-8', xml_declaration=True)
+    if recent_entries is not None:
+        # Build a set of titles for matching
+        recent_titles = set()
+        for entry in recent_entries:
+            if 'title' in entry:
+                recent_titles.add(entry['title'])
+        idx = 0
+        for item in list(items):
+            title = item.find('title')
+            key = title.text if title is not None else None
+            if key in recent_titles and idx < len(html_contents):
+                content = html_contents[idx]
+                idx += 1
+                summary = content.get('summary', '')
+                html = content.get('html', '')
+                desc = item.find('description')
+                combined = ''
+                if summary:
+                    combined += f'<b>Summary:</b> {summary}<br/>'
+                if html:
+                    combined += html
+                if desc is not None:
+                    desc.text = combined + '\n' + (desc.text or '')
+                else:
+                    ET.SubElement(item, 'description').text = combined
+            else:
+                if channel is not None:
+                    channel.remove(item)
+    else:
+        for item, content in zip(items, html_contents):
+            summary = content.get('summary', '')
+            html = content.get('html', '')
+            desc = item.find('description')
+            combined = ''
+            if summary:
+                combined += f'<b>Summary:</b> {summary}<br/>'
+            if html:
+                combined += html
+            if desc is not None:
+                desc.text = combined + '\n' + (desc.text or '')
+            else:
+                ET.SubElement(item, 'description').text = combined
+    root = tree.getroot()
+    if root is None:
+        return b''
+    return ET.tostring(root, encoding='utf-8', xml_declaration=True)
 
 # --- STEP 5: Save Processed RSS ---
 def save_rss(xml_bytes, path):
@@ -104,25 +137,44 @@ if __name__ == '__main__':
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     from urllib.parse import urlparse
     import re
+    import time as _time
     for feed_url in RSS_FEED_URLS:
         print(f'Processing feed: {feed_url}')
         # 1. Fetch
         feed_xml = fetch_rss(feed_url)
         # 2. Parse
         parsed = parse_rss(feed_xml)
-        # 3. Process each entry with Gemini (get summary and html)
+        # 3. Filter entries newer than 24 hours
+        now = _time.time()
+        twenty_four_hours = 24 * 60 * 60
+        recent_entries = []
+        for entry in parsed.entries:
+            entry_time = None
+            if hasattr(entry, 'published_parsed') and entry.published_parsed:
+                # Only use if it's a struct_time
+                if isinstance(entry.published_parsed, _time.struct_time):
+                    entry_time = _time.mktime(entry.published_parsed)
+            elif hasattr(entry, 'updated_parsed') and entry.updated_parsed:
+                if isinstance(entry.updated_parsed, _time.struct_time):
+                    entry_time = _time.mktime(entry.updated_parsed)
+            if entry_time and (now - entry_time <= twenty_four_hours):
+                recent_entries.append(entry)
+        print(f"Found {len(recent_entries)} entries newer than 24 hours.")
+        # 4. Process each recent entry with Gemini (get summary and html)
         html_contents = []
-        for idx, entry in enumerate(parsed.entries):
+        for idx, entry in enumerate(recent_entries):
             content = entry.get('summary', '') or entry.get('description', '')
             result = process_with_gemini(content)
             html_contents.append(result)
             # Rate limit: 15 requests per minute (1 request every 4 seconds)
-            if idx < len(parsed.entries) - 1:
+            if idx < len(recent_entries) - 1:
                 time.sleep(4)
-        # 4. Add summary and HTML to RSS
-        processed_xml = add_html_to_rss(feed_xml, html_contents)
-        # 5. Save, use a unique filename per feed (from feed title if available)
-        feed_title = parsed.feed.get('title', None)
+        # 5. Add summary and HTML to RSS (only for recent entries)
+        processed_xml = add_html_to_rss(feed_xml, html_contents, recent_entries=recent_entries)
+        # 6. Save, use a unique filename per feed (from feed title if available)
+        feed_title = None
+        if isinstance(parsed.feed, dict):
+            feed_title = parsed.feed.get('title', None)
         if feed_title:
             # Sanitize title to filename: remove non-alphanum, replace spaces with _
             feed_name = re.sub(r'[^A-Za-z0-9_]+', '', feed_title.replace(' ', '_'))
