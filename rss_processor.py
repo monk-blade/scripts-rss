@@ -7,7 +7,7 @@ from xml.etree import ElementTree as ET
 # --- CONFIG ---
 RSS_FEED_URLS = [
     'https://reader.websitemachine.nl/api/query.php?user=arpanchavdaeng&t=43c93b5336ffb7d07cc1b3971fde9970&f=rss',  # Add your feed URLs here
-    'https://reader.websitemachine.nl/api/query.php?user=arpanchavdaeng&t=870ee7e79a574c5f83ac21ac1998ed54&f=rss',
+    'https://reader.websitemachine.nl/api/query.php?user=arpanchavdaeng&t=0047bbb69bd4add7ed9d72e8ed02361a&f=rss',
     'https://reader.websitemachine.nl/api/query.php?user=arpanchavdaeng&t=9d10ff528a331696b57f0bc86caa336f&f=rss',
 ]
 gemini_api_key = os.getenv('GEMINI_API_KEY')  # Set your Gemini API key as env var
