@@ -21,7 +21,7 @@ jobs:
           python-version: '3.12'
 
       - name: Trigger feed update
-        timeout-minutes: 2
+        timeout-minutes: 3
         env:
           READER_URL: ${{ secrets.READER_URL }}
         run: |
