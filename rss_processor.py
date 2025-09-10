@@ -37,7 +37,7 @@ def process_with_gemini(text):
         return {'summary': '', 'html': ''}
     headers = {'Content-Type': 'application/json'}
     prompt = (
-        "Summarize the following RSS feed item to cover everything of content in bullet points with emojis in gujarati language and with html formatting. Summary must start with \"સારાંશ\" H2 heading and output.\n"
+        "Summarize the following RSS feed item to cover everything of content in two-three paragraphs with emojis in gujarati language and with html formatting. Summary must start with \"સારાંશ\" H2 heading and output.\n"
         "Feed Content: " + text
     )
     payload = {
